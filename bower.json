@@ -1,0 +1,28 @@
+{
+  "name": "ng-showcase",
+  "description": "ng-showcase",
+  "main": "webpack.config.js",
+  "authors": [
+    "JGluhov"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "showcase"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-ui-router": "ui-router#~0.2.16",
+    "ngstorage": "~0.3.10",
+    "uikit": "~2.24.3",
+    "lodash": "~4.0.1"
+  }
+}

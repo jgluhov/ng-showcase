@@ -1,0 +1,31 @@
+{
+  "name": "ng-showcase",
+  "version": "0.0.0",
+  "description": "ng-showcase",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgluhov/ng-showcase.git"
+  },
+  "keywords": [
+    "showcase"
+  ],
+  "author": "JGluhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgluhov/ng-showcase/issues"
+  },
+  "homepage": "https://github.com/jgluhov/ng-showcase#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^1.0.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.5.1",
+    "traceur-loader": "^0.6.3",
+    "webpack": "^1.12.12"
+  }
+}

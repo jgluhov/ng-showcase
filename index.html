@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-showcase</title>
+    <link rel="stylesheet" href="bower_components/uikit/css/uikit.gradient.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="uk-container uk-container-center">
+            <div class="uk-block">
+                <ul class="uk-tab" data-uk-tab>
+                    <li ui-sref-active="uk-active"><a ui-sref="active">витрина</a></li>
+                    <li ui-sref-active="uk-active"><a ui-sref="inactive">удаленные товары</a></li>
+                </ul>
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/uikit/js/uikit.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <!--<script src="bower_components/lodash/dist/lodash.min.js"></script>-->
+    <script src="assets/bundle.js"></script>
+</body>
+</html>
