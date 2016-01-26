@@ -18,8 +18,11 @@ export function thumbnail($rootScope) {
     </div>
   </a>`;
 
-  function link(scope) {
+  function link(scope, element) {
     let status = $rootScope.$state.params.status;
+    let thumbnail = element.find('.uk-thumbnail');
+
+    if(scope.product.selected) thumbnail.addClass('selected');
 
     scope.onDelete = () => {
       return status === 'active' ?
@@ -27,6 +30,9 @@ export function thumbnail($rootScope) {
         $rootScope.$storage.products.splice($rootScope.$storage.products.indexOf(scope.product),1)
     };
 
+    element.bind('click', function() {
+      thumbnail.toggleClass('selected');
+    });
   }
 
   return {

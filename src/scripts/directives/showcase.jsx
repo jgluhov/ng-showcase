@@ -3,10 +3,15 @@ import '../../styles/showcase.styl';
 export function showcase($rootScope) {
 
   let template = `
+    <nav class="uk-navbar">
+      <div class="uk-navbar-content" total-products></div>
+      <div class="uk-navbar-content" delete-all></div>
+      <div class="uk-navbar-content uk-navbar-flip" search-products></div>
+    </nav>
     <ul class="uk-grid">
-      <li ng-repeat="product in $storage.products | status: selection"
-          class="uk-width-medium-1-4"
-          ng-class="{'uk-grid-margin': $index > 3}">
+      <li ng-repeat="product in $storage.products | status: status"
+        class="uk-width-medium-1-4"
+        ng-class="{'uk-grid-margin': $index > 3}">
 
         <thumbnail
           product="product"
@@ -18,26 +23,26 @@ export function showcase($rootScope) {
     </ul>`;
 
   function link(scope) {
-    scope.selection = $rootScope.$state.params.status;
+    scope.status = $rootScope.$state.params.status;
+    scope.mSelected = _.filter($rootScope.$storage.products, { 'selected': true });
 
     scope.onSelect = (product) => {
-      console.log(`Select ${product}`)
+      product.selected = !product.selected;
+
+      let index = scope.mSelected.indexOf(product);
+      return index < 0 ?
+        scope.mSelected.push(product) :
+        scope.mSelected.splice(index, 1)
     };
 
     scope.onEdit = (product) => {
       console.log(`Edit ${product}`);
-    }
-  }
-
-  function controller() {
-    let self = this;
-    self.selectedProducts = [];
+    };
 
   }
 
   return {
     link: link,
-    template: template,
-    controller: controller
+    template: template
   }
 }

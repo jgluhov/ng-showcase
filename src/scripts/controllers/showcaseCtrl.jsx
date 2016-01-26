@@ -1,13 +1,6 @@
-export function showcaseCtrl($scope, $rootScope, selectedProducts) {
-  $scope.product = {
-    name: null,
-    cost: null,
-    photo: {},
-    status: 'active'
-  };
+export function showcaseCtrl($scope, $rootScope) {
 
-  $scope.searchQuery = '';
-  $scope.selectedProducts = selectedProducts;
+
 
   $scope.submit = (form) => {
     if(!$rootScope.$storage.products)
