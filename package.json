@@ -4,7 +4,7 @@
   "description": "ng-showcase",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "webpack"
+    "start": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
