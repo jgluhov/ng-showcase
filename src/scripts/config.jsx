@@ -1,4 +1,4 @@
-export function config($stateProvider, $urlRouterProvider) {
+export function config($stateProvider, $urlRouterProvider, paginationTemplateProvider) {
 
   $urlRouterProvider.otherwise('/active');
 
@@ -15,5 +15,7 @@ export function config($stateProvider, $urlRouterProvider) {
       params: { status: 'inactive' },
       templateUrl: './assets/templates/showcase.html'
     });
+
+  paginationTemplateProvider.setPath('./assets/templates/pagination.html')
 
 }

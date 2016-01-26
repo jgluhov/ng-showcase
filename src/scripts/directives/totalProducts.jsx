@@ -1,7 +1,5 @@
 export function totalProducts($rootScope) {
-  var template = `
-  Всего товаров: <span ng-bind="$storage.products.length"></span>
-  `;
+  var template = `<strong>Всего товаров: <span ng-bind="$storage.products.length"></span></strong>`;
 
   function link() {
 

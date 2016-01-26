@@ -3,10 +3,10 @@ export function thumbnail($rootScope) {
   let template = `
   <a class="uk-thumbnail" ng-click="onSelect()">
     <img ng-src="{{product.photo.data}}" alt="">
-    <div class="uk-thumbnail-caption uk-margin-small-bottom" ng-bind="product.name"></div>
+    <div class="uk-thumbnail-caption uk-margin-small-bottom thumbnail-name" ng-bind="product.name"></div>
     <div class="uk-thumbnail-caption uk-margin-small-bottom">
       <div class="uk-flex uk-flex-middle uk-flex-space-around">
-        <div class="uk-text-large" ng-bind="product.cost | sale: 1.3 | currency: $ : 0"></div>
+        <div class="uk-text-large sale" ng-bind="product.cost | sale: 1.3 | currency: $ : 0"></div>
         <div class="uk-text-large" ng-bind="product.cost | currency: $ : 0"></div>
       </div>
     </div>
@@ -26,7 +26,7 @@ export function thumbnail($rootScope) {
 
     scope.onDelete = () => {
       return status === 'active' ?
-        product.status = 'inactive' :
+        scope.product.status = 'inactive' :
         $rootScope.$storage.products.splice($rootScope.$storage.products.indexOf(scope.product),1)
     };
 

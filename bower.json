@@ -23,6 +23,7 @@
     "angular-ui-router": "ui-router#~0.2.16",
     "ngstorage": "~0.3.10",
     "uikit": "~2.24.3",
-    "lodash": "~4.0.1"
+    "lodash": "~4.0.1",
+    "angularUtils-pagination": "angular-utils-pagination#~0.10.0"
   }
 }
