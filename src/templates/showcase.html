@@ -3,8 +3,11 @@
     <div class="uk-panel uk-panel-space sc-panel-space-small" ng-show="$state.params.status === 'active'">
         <a href="#addProduct" class="uk-button uk-button-success uk-float-left uk-margin-right" data-uk-modal="{center:true}">
             <i class="uk-icon-plus"></i> Добавить товар</a>
-        <button ng-if="selectedProducts.length > 0" class="uk-button uk-button-success uk-float-left" data-uk-modal="{center:true}">
-            <i class="uk-icon-plus"></i> Удалить выделенные товары</button>
+
+        <button ng-if="selectedProducts.length" class="uk-button uk-button-success uk-float-left" data-uk-modal="{center:true}"
+                ng-click="onDeleteSelectedProducts()">
+            <i class="uk-icon-trash"></i> Удалить выделенные товары {{ selectedProducts.length }}
+        </button>
     </div>
 
     <form class="uk-form uk-form-stacked" name="productForm" novalidate ng-submit="submit(productForm)">
@@ -46,7 +49,7 @@
     </form>
 
     <div showcase></div>
-</div>
+</di
 
 
 

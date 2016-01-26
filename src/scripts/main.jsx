@@ -7,6 +7,7 @@ import {showcaseCtrl} from './controllers/showcaseCtrl.jsx';
 import {fileModel} from './directives/fileModel.jsx';
 import {showcase} from './directives/showcase.jsx';
 import {selectable} from  './directives/selectable.jsx';
+import {thumbnail} from './directives/thumbnail.jsx';
 
 import {selectedProducts} from './services/selectedProducts.jsx';
 
@@ -27,7 +28,8 @@ ngShowcase
 ngShowcase
   .directive('fileModel', fileModel)
   .directive('showcase', showcase)
-  .directive('selectable', selectable);
+  .directive('selectable', selectable)
+  .directive('thumbnail', thumbnail);
 
 ngShowcase
   .filter('status', status)
